@@ -1,0 +1,406 @@
+/*
+Halloween
+Candela Utrero Romero-Hombrebueno
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+:root {
+    --header-height: 3.5rem;
+
+  --hue: 14;
+  --first-color: hsl(var(--hue), 91%, 54%);
+  --first-color-alt: hsl(var(--hue), 91%, 50%);
+  --title-color: hsl(var(--hue), 4%, 100%);
+  --text-color: hsl(var(--hue), 4%, 85%);
+  --text-color-light: hsl(var(--hue), 4%, 55%);
+
+  /*gradiente*/
+  --body-color: linear-gradient(90deg, hsl(104, 28%, 40%) 0%, hsl(58, 28%, 40%) 100%);
+  --container-color: linear-gradient(136deg, hsl(104, 28%, 35%) 0%, hsl(58, 28%, 35%) 100%);
+
+  /*fuente*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-black: 900;
+
+  /*margenes*/
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*z index*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  }
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background: var(--body-color);
+    color: var(--text-color);
+}
+
+#contenedor{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1,h2,h3,h4{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+  
+ul{
+    list-style: none;
+}
+  
+a{
+    text-decoration: none;
+    color:rgba(246, 128, 73, 0.924);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#apartados>div>h3{
+    padding: 4.5rem 0 2rem;
+    font-size: var(--h1-font-size);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+#apartados>div#titulo{
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2);
+    text-align: center;
+}
+
+#enlacesintra>h3::before{
+    content: 'Programación en internet';
+}
+
+#enlacesintra>h3>span{
+    display: none;
+}
+
+#enlacesintra {
+    width: 100%;
+    background: var(--body-color); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+
+    height: calc(var(--header-height) + 1.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--title-color);
+}
+
+#enlacesintra>.ul1{
+    display: flex;
+    flex-direction: row;
+    row-gap: 1.5rem;
+    align-items: center;
+}
+
+a1::before, a2::before, a3::before, a4::before{
+    content: '';
+    position: absolute;
+    bottom: -.75rem;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+}
+
+.a1, .a2, .a3, .a4, #enlacesintra>h3{
+    text-transform: initial;
+    font-weight: initial;
+    transition: .4s;
+    position: relative;
+    color: var(--title-color);
+    padding: 1em;
+}
+  
+.a1:hover, .a2:hover, .a3:hover, .a4:hover{
+    color: var(--text-color);
+}
+
+div#intro{
+    padding-top: 9rem;
+    padding: 5rem 0 2rem;
+}
+
+div#intro>#titulo>h2{
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-black);
+    line-height: 109%;
+    margin-bottom: var(--mb-1-5);    
+}
+
+div#intro>#titulo>h1{
+    display:none;
+}
+
+p{
+    margin-top: 1em;
+}
+
+#resumen>ul{
+    list-style:disc;
+    margin: 1em;
+    padding-left: 2em;
+}
+
+#resumen>p{
+    display:inline;
+}
+
+#comentario{
+    margin-top: 1em;
+}
+
+#comentario>p{
+    display: inline;
+}
+
+#apartados>#objetivos{
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+    background: var(--container-color);
+    margin-top: 4.5rem;
+}
+
+#apartados>#objetivos>h3{
+    margin-bottom: 0;
+    padding-top:4.5rem;
+}
+
+#apartados>#objetivos>.p1{
+    padding-left: 1em;
+    padding-top: 0;
+}
+
+#apartados>#objetivos>.p2{
+    padding-left: 1em;
+    padding-bottom: 4.5rem;
+}
+
+#contenidos{
+    margin-top: 4em;
+    background-image: url("home1-img1.png");
+    background-repeat: no-repeat;
+}
+
+div#contenidos>h3{
+    padding-bottom: 0;
+    margin-bottom: .5em;
+    /* padding-top: 0; */
+    padding-left: 0;
+}
+
+#contenidos>p.p1{
+    text-align: center;
+    
+}
+
+#contenidos>ul.ul1{
+    display:flex;
+    justify-content: space-around;
+}
+
+#contenidos>ul.ul1>li{
+    font-weight:bolder;
+}
+
+#contenidos>ul.ul1>li>ul{
+    font-weight:lighter;
+    list-style: disc;
+    padding-top: .5em;
+    text-align:start;
+}
+
+#contenidos>ul.ul1>li{
+    position: relative;
+    margin-top:2em;
+    border-radius: 3rem;
+    background: var(--container-color);
+    margin: 2em;
+    padding: 2em;
+    padding-top:1em;
+    text-align: center;
+    
+}
+
+#contenidos>p.p3{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#contenidos>ul.ul2{
+    list-style: disc;
+    text-align: center;
+}
+
+#apartados>#profesores>h3{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+#apartados>#profesores>p.p1{
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+#apartados>#profesores>p.p2{
+    font-size:var(--small-font-size);
+}
+
+#profesores>dl{
+    border-radius: 3rem;
+    background: var(--container-color);
+    padding: 1em;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: center;
+}
+
+#profesores>dl{
+    margin-left: 1em;
+    background-image:url("about-img1.png");
+    background-repeat: no-repeat;
+}
+
+#profesores>dl>dt{
+    font-weight: bold;
+}
+
+#profesores>dl>dd{
+    margin-bottom: 1em;
+}
+
+div#bibliografia>h3{
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+}
+
+
+#bibliografia>dl>dt{
+    padding-top: 0;
+    margin-top:0;
+    display: list-item;
+    list-style-image: url("favicon.png");
+    text-align: center;
+    font-weight: bold;
+}
+
+#bibliografia>dl>dd{
+    text-align: center;
+    padding-bottom: 1em;
+    font-size: var(--small-font-size);
+}
+
+#enlaces{
+    margin-top:4em;
+    display: flex;
+    justify-content: space-around;
+    color: var(--title-color);
+    margin-bottom:4em;
+}
+
+#enlaces>div>h3{
+    text-align: center;
+}
+
+div#enlaces>div{
+    margin: 1em;
+    position: relative;
+    border-radius: 3rem;
+    background: var(--container-color);
+    padding:2em;
+    padding-top:1em;
+    text-align: center;
+}
+div#enlaces>div>ul>li>a{
+    padding:0;
+}
+
+div#enlaces>div>ul{
+    padding-top:1em;
+}
+
+#lselecciona>ul>li>a{
+    text-decoration: none;
+    color:rgba(246, 128, 73, 0.924);
+}
+
+#lselecciona>ul>li>a.c{
+    text-decoration: none;
+    color:white;
+    /* color:rgba(246, 128, 73, 0.924); */
+}
+
+#lhistorico>ul>li>a.a1,#lhistorico>ul>li>a.a3{
+    text-decoration: none;
+    color:rgba(246, 128, 73, 0.924);
+}
+
+#lrecursos>ul>li>a.a1,#lrecursos>ul>li>a.a3{
+    text-decoration: none;
+    color:rgba(246, 128, 73, 0.924);
+}
+
+#enlacesversiones>ul{
+    display: flex;
+    justify-content: space-around;
+    color: var(--title-color);
+}
+
+#enlacesversiones>ul>li{
+    position: relative;
+    text-align: center;
+    margin-top: 5em;
+}
+
+#enlacesversiones>h3>span{
+    display: none;
+}
+
+#extraDiv1{
+    height: 70px;
+    background-image: url("home2-img.png");
+    background-repeat:space;
+}
+
